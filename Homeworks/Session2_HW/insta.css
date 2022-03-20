@@ -1,0 +1,86 @@
+
+body{
+    background-color: brown;
+}
+.mainbackground {
+    background-color: white;
+    height: 700px;
+    width: 400px;
+    
+    position: relative;
+    
+    
+}
+
+#top_bar {
+    background-color: white;
+    position: relative;
+    width: 400px;
+    height: 55px;
+    z-index: 2;
+   }
+
+#username {
+    background-color: white;
+    position: relative;
+    width: 400px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    font-size: 15pt;
+    flex-direction: row;
+    align-items: stretch;
+    z-index: 2;
+    
+}
+#usernamefont {
+    position: absolute;
+    display: flex;
+    left: 10%;
+    position: bottom 79%;
+}
+#locker {
+    position: absolute;
+    left: 3%
+}
+
+#add {
+    position: absolute;
+    right: 14%
+}
+#menu-burger {
+    position: absolute;
+    right: 4%
+    
+}
+
+#profile {
+    background-color: blue;
+    position: absolute;
+    width: 400px;
+    height: 94px;
+    z-index: 3;
+    top: 105px;
+}
+
+
+
+#about_gang {
+    background-color: white;
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    z-index: 3;
+    top: 199px;
+    font-size: x-small;
+    line-height: 5px;
+}
+#posts {
+     background-color: blue;
+    position: absolute;
+    width: 400px;
+    height: 55px;
+    top: 302px;
+}
+
+
