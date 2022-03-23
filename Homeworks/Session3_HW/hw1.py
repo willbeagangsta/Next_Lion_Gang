@@ -38,5 +38,3 @@ while True:
         
 
 
-if count > 0:
-    print("지금까지 평균은 %f 입니다." %(Sum/count))
