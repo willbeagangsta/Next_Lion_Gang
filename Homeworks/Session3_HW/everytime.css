@@ -1,0 +1,176 @@
+body {
+    background-color: brown;
+    display: flex;
+}
+
+#evbackground {
+    position: absolute;
+    background-color: #111111;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height:80%;
+    width: 20%;
+    margin-top: 5%;
+    margin-left: 4%;
+    display: flex;
+   
+}
+
+#top_bar {
+    top: 2%;
+    position: absolute;
+    
+    height: 10%;
+    width: 100%;
+}
+
+#et {
+    font-size: small;
+    position: absolute;
+    
+    left: 7%;
+    top: 11%;
+    color: red;
+    }
+
+#ks {
+    font-size: large;
+    position: absolute;
+    left: 7%;
+    top: 35%;
+    color: white;
+}
+
+#top_icons {
+    position: absolute;
+    right: 7%;
+    top: 35%;
+    width: 24%;
+    height: 50%;
+}
+
+#class_today {
+    position: absolute;
+    height: 31%;
+    width: 100%;
+    
+    top: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+#todaybox {
+    position: absolute;
+    width: 89%;
+    height: 90%;
+    background-color: #111111;
+    border-radius: 10px;
+    padding: 1% 1%;
+    background-clip: content-box;
+    
+}
+
+
+#six_icons {
+    position: absolute;
+    height: 17%;
+    top: 41%;
+    width: 100%;
+    
+    display: flex;
+    
+    align-items: center;
+
+}
+
+
+
+.oneofsixicons {
+    position: absolute;
+    height: 89%;
+    width: 15%;
+    
+    flex-direction: column;
+}
+
+#no1 {
+    left: 2.5%;
+}
+
+
+#no2 {
+    left: 18.5%;
+}
+
+#no3 {
+    left: 34.5%;
+}
+
+#no4 {
+    left:50.5%;
+}
+
+#no5 {
+    left: 66.5%;
+}
+
+#no6 {
+    left: 82.5%;
+}
+
+.ticons {
+    width: 55%;
+    height: 65%;
+}
+
+.button {
+    
+    position: absolute;
+    height: 48%;
+    width:98%;
+    left: 1%;
+    right: 1%;
+    top:1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_name {
+ 
+    position: absolute;
+    height: 48%;
+    width: 97%;
+    left: 1.5%;
+    right: 1.5%;
+    bottom: 1%;
+    font-size: 68%;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    
+}
+
+#coyg {
+    position: absolute;
+    height: 12%;
+    left: 2%;
+    right: 2%;
+    width: 96%;
+    top: 55%;
+    border-radius: 10px;
+    
+}
+
+#bottom {
+    position: absolute;
+    height: 31%;
+    width: 91%;
+    left: 4.5%;
+    bottom:0.5%;
+}
+
+    
+
