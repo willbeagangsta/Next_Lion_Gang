@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>글 쓰기 페이지</h2>
+        <form action="/new" method="post">
+            {% csrf_token %}
+            <div>
+                <div>Category</div>
+                <select name="category">
+                    <option>카테고리 선택하기</option>
+                    <option>취미(hobby)</option>
+                    <option>음식(food)</option>
+                    <option>프로그래밍(programming)</option>
+                </select>
+            </div>
+            <div>
+                <div>글 제목</div>
+                <input type="text" name="title" />
+            </div>
+            <div>
+                <div>글 내용</div>
+                <textarea name="content" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit"><a href="{% url 'hobby' %}">취미(hobby) 작성 완료</a></button>
+            <button type="submit"><a href="{% url 'food' %}">음식(food) 작성 완료</a></button>
+            <button type="submit"><a href="{% url 'programming' %}">프로그래밍(programming) 작성 완료</a></button>
+        </form>
+    </body>
+</html>
