@@ -10,16 +10,7 @@
         <h2>글 쓰기 페이지</h2>
         <form action="/new" method="post">
             {% csrf_token %}
-            <div>
-                <div>Category</div>
-                <select name="category">
-                    <option>카테고리 선택하기</option>
-                    <option>취미(hobby)</option>
-                    <option>음식(food)</option>
-                    <option>프로그래밍(programming)</option>
-                </select>
-            </div>
-            <div>
+            
                 <div>글 제목</div>
                 <input type="text" name="title" />
             </div>

@@ -1,0 +1,22 @@
+
+body {
+    
+    background-color: rgb(255, 184, 184); 
+}
+
+#container{
+    position: absolute;
+    background-color: rgb(223, 166, 97);
+    width: 60vw;
+    left: 20vw;
+    
+}
+#top_bar {
+    position: absolute;
+    background-color: #840000;
+    font-size: x-large;
+    color: goldenrod;
+    width: 100%;
+    font-weight: ;
+}
+/* 모든 전공을 first-div 로 id를 입히고, 전공 추가하기 버튼 꾸미기, & 전공 list 보여주기 */

@@ -1,0 +1,53 @@
+<!-- 새로운 일정을 생성하는 페이지(제목,내용 그리고 제출하는 버튼 필수 포함) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="Top_Bar">
+    J가 되기 위해,,,계획을 세워보자
+    </div>
+    <div class="Main">
+        <br>
+        <br>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div id="ccoo">
+                <label for="title"></label>
+                
+                <input type="text" name="title" id="title" placeholder="우선 제목을 입력해보자">
+            </div>
+            <br>
+            <br>
+            <div id="ccoo">
+                <label for="content"></label>
+                <textarea name="content" id="content" cols="30" rows="10" placeholder="그리고 내용을 적어보자"></textarea>
+            </div>
+            <br>
+            <br>
+            <div id="ccoo">
+                <label for="deadline">마감 날짜</label>
+            </div>
+            <br>
+            <div id="ccoo">
+                
+                <input type="date" name="deadline" id="deadline"></input>
+            </div>
+            <br>
+            <br>
+            <div  id="ccoo">
+                <button type="submit">기록하기</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

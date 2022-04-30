@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <h2>{{ TheMajor.name }}</h2>
+   
+    <h4>전공 과목 리스트</h4>
+    <ol>
+        {% for subject in detailedMajor %}
+        <div>
+            <br>
+            <li>
+        
+                <span class="bold">과목명: {{ subject.subject_name }}</span>
+                <span> | 전공 학부: {{ subject.major }} | </span>
+                <span> 교수명: {{ subject.prof_name }} </span>
+                </br>
+        
+        
+                <div class="memos">
+                    <p>{{subject.memo|linebreaks }}</p>
+                </div>
+        
+                <a href="{% url 'editSubject' subject.pk %}" class="button"> 수정</a>
+                <a href="{% url 'deleteSubject' subject.pk %}" class="button"> 삭제</a>
+                </br>
+            </li>
+            <br>
+        </div>
+        <br>
+        
+        {% endfor %}
+        </ol>
+        
+    <br>
+    <br>
+    <div>
+        <a href="{% url 'home' %}"><button>홈 화면으로</button></a>
+    </div>
+    </body>
+
+    </html>

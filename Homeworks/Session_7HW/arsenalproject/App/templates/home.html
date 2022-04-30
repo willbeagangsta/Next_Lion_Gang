@@ -1,0 +1,40 @@
+<!-- 메인 화면(할 일들을 전부 볼 수 있음. 제목, 제목+내용 ,내용 보여야함. ) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'homey.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+        <div class="Top_Bar"><p>To-Do-List</p></div>
+
+        
+
+        <div class="Main">
+            <div id="ccoo"><h2>무계획인 나를 변화시키고 싶다면?</h2></div><br>
+            <div id="ccoo"><a href="{% url 'new' %}"><button class="button">계획을 세워보자</button></a></div>
+            <br>
+            <div id="ccoo"><h2>J가 되기 위한 발버둥의 흔적들</h2></div>
+            <div id="ccoo">
+                <ol>
+                
+                {% for post in posts %}
+                <li>
+                    <a href="{% url 'detail' post.pk %}">{{ post.title }}</a>
+                </li>
+                {% endfor %}
+            </ol>
+            </div>
+        </div>
+        
+        
+</body>
+
+</html>

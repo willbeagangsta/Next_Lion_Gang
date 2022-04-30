@@ -16,7 +16,9 @@ def new(request):
         new_article = Article.objects.create(
             title = request.POST['title'],
             content = request.POST['content'],
-            category = request.POST['category']
+            hobby = request.POST['hobby'],
+            food = request.POST['food'],
+            programming = request.POST['programming']
 
         )
         return redirect('list')
@@ -31,14 +33,14 @@ def detail(request, article_id):
     article = Article.objects.get(id=article_id)
     return render(request, 'detail.html', {'article':article})
 
-def hobby(request):
-    article = Article.objects.get(category=hobby)
-    return render(request, 'hobby.html', {'category':hobby})
+def hobby(request, article_hobby):
+    article = Article.objects.all()
+    return render(request, 'hobby.html', {'article': article})
     
-def food(request):
-    article = Article.objects.get(category=food)
-    return render(request, 'food.html', {'category':food})
+def food(request, article_food):
+    article=Article.objects.all()
+    return render(request, 'food.html', {'article': article})
 
-def programming(request):
-    article = Article.objects.get(category=programming)
-    return render(request, 'programming.html', {'category':programming})
+def programming(request, article_programming):
+    article=Article.objects.all()
+    return render(request, 'programming.html', {'article': article})

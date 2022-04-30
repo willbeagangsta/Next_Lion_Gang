@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Main">
+        <div id="ccoo">
+            <h2>할 일의 제목!!</h2>
+        </div>
+        <div id="ccoo">
+            <p>{{ post.title }}</p>
+        </div>
+        <div id="ccoo">
+            <h2>디테일한,,? 계획</h2>
+        </div>
+        <div id="ccoo">
+            <p>{{ post.content }}</p>
+        </div>
+        <div id="ccoo">
+            <h2>지킬지는 모르겠지만,,,마감 기한</h2>
+        </div>    
+        <div id="ccoo">
+            <p>{{ post.deadline }}</p>
+        </div>
+        <div id="ccoo">
+        <a href="{% url 'home' %}"><button>메인으로,,,</button></a>
+        <a href="{% url 'edit' post.pk %}"><button>수정하기 버튼,,,</button></a>
+        <a href="{% url 'delete' post.pk %}"><button>삭제하기 버튼,,,</button></a>
+        </div>
+    </div>
+</body>
+</html>
