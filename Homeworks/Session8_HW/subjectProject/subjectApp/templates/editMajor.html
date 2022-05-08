@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'homereal.css' %}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h2>정보 수정하기</h2>
-    <div class="major">
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button>수정</button>
-        </form>
+    <div id="container">
+        <div id="top_bar">
+            <h2>Edit Information</h2>
+        </div>
+        <div class="Main_Page">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button>Edit</button>
+            </form>
+            <div><img id="xhaka" src="https://mir-s3-cdn-cf.behance.net/projects/404/a8519e118961063.Y3JvcCw0NDgzLDM1MDYsMCw0OTk.png">
+            </div>
+        </div>
     </div>
 </body>
 </html>

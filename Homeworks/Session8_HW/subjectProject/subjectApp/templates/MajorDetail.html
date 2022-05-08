@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'homereal.css' %}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
-    <h2>{{ TheMajor.name }}</h2>
-   
-    <h4>전공 과목 리스트</h4>
-    <ol>
-        {% for subject in detailedMajor %}
-        <div>
-            <br>
-            <li>
-        
-                <span class="bold">과목명: {{ subject.subject_name }}</span>
-                <span> | 전공 학부: {{ subject.major }} | </span>
-                <span> 교수명: {{ subject.prof_name }} </span>
-                </br>
-        
-        
-                <div class="memos">
-                    <p>{{subject.memo|linebreaks }}</p>
+    <body>
+        <div id="container">
+            <div id="top_bar"><h2>{{ TheMajor.name }}</h2></div>
+        <div class="Main_Page">
+            <h4>Position Players</h4>
+            <ol>
+                {% for subject in detailedMajor %}
+                <div>
+                    <br>
+                    <li>
+                    
+                        <span class="bold">Player Name: {{ subject.subject_name }}</span>
+                        <br>
+                        <span>Position: {{ subject.major }}</span>
+                        <br>
+                        <span>Back NO: {{ subject.prof_name }}</span>
+                        <br>
+                        <span>Preffered Foot: {{subject.memo}}</span>
+                        <br>
+                        <a href="{% url 'editSubject' subject.pk %}" class="button"><button>Edit</button></a>
+                        <a href="{% url 'deleteSubject' subject.pk %}" class="button"><button>Delete</button></a>
+                        </br>
+                    </li>
+                    <br>
                 </div>
-        
-                <a href="{% url 'editSubject' subject.pk %}" class="button"> 수정</a>
-                <a href="{% url 'deleteSubject' subject.pk %}" class="button"> 삭제</a>
-                </br>
-            </li>
-            <br>
+                <br>
+                
+                {% endfor %}
+                </ol>
         </div>
-        <br>
-        
-        {% endfor %}
-        </ol>
-        
-    <br>
-    <br>
-    <div>
-        <a href="{% url 'home' %}"><button>홈 화면으로</button></a>
-    </div>
+            <br>
+            <br>
+            <div>
+                <a href="{% url 'home' %}"><button>Back To Home</button></a>
+            </div>
+        </div>
+        <div><img id="xhaka" src="https://premierleaguenewsnow.com/wp-content/uploads/2021/09/Takehiro-Tomiyasu-Arsenal-1000x600.jpg"></div>
+        </div>
     </body>
 
     </html>

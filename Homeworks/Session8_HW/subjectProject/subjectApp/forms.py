@@ -11,7 +11,7 @@ class MajorModelForm(forms.ModelForm):
         model = Major
         fields = ('name',)
         widgets = {
-            'name' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': '전공을 입력하세요.'}),
+            'name' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Position'}),
         }
 
 class SubjectModelForm(forms.ModelForm):
@@ -20,8 +20,8 @@ class SubjectModelForm(forms.ModelForm):
         fields = ('major', 'subject_name', 'prof_name', 'memo')
         widgets = {
             'major' : forms.Select(choices=Major_choices, attrs={'class': 'form-control'}),
-            'subject_name' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': '과목명을 입력하세요'}),
-            'prof_name' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': '교수님 이름을 입력하세요'}),
-            'memo' : forms.TextInput(attrs={'class': 'form-control', 'placeholder':'메모사항을 입력하세요.'}),
+            'subject_name' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Player Name'}),
+            'prof_name' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Back Number'}),
+            'memo' : forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Preffered Foot'}),
         }
         

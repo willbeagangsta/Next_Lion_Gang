@@ -58,7 +58,7 @@ def DeleteMajorView(reqeust, major_pk):
     return redirect('DeleteComplete')
 
 def DeleteCompleteView(request):
-    comment = '전공이 삭제 되었습니다.'
+    comment = 'Deleted'
 
     return render(request, 'DeleteComplete.html', {'comment' : comment})
 
