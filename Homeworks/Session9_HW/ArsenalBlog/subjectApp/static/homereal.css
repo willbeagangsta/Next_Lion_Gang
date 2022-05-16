@@ -1,11 +1,11 @@
 body {
 
-    background-color: rgb(208, 228, 23);
+    background-color: red;
 }
 
 #container {
     position: absolute;
-    background-color: navy;
+    background-color: white;
     width: 60%;
     left: 20%;
     height: 80%;
@@ -15,7 +15,7 @@ body {
 
 #top_bar {
 
-    background-color: rgb(247, 239, 193);
+    background-color: gold;
     color: blue;
     display: flex;
     justify-content: center;
@@ -24,7 +24,7 @@ body {
 
 .Main_Page {
     justify-content: center;
-    color: rgb(244, 221, 225);
+    color: rgb(124, 15, 37);
     font-weight: 600;
     text-align: center;
 }

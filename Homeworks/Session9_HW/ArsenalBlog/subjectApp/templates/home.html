@@ -11,32 +11,32 @@
 <body>
    
     <div id="container">
-        <div id="top_bar"><h1>나만의 축구 블로그를 만들어보자</h1></div>
+        <div id="top_bar"><h1>Come On Ya Gunners</h1></div>
         
         <div class="Main_Page">
             <h1>Poistions</h1>
             <a href="{% url 'addMajor' %}" class="button"><button>+Add Positions</button></a>
-            
+            <ul>
                 {% for major in majors %}
                 <div>
-                    
+                    <li>
                         <span class="bold">{{ major.name }}</span>
-                        <a href="{% url 'editMajor' major.pk %}" class="button"><button>수정</button></a>
-                        <a href="{% url 'deleteMajor' major.pk %}" class="button"><button>삭제</button></a>
-                        <a href="{% url 'MajorDetail' major.pk %}" class="button"><button>명단 리스트</button></a>
-                    
+                        <a href="{% url 'editMajor' major.pk %}" class="button"><button>Edit</button></a>
+                        <a href="{% url 'deleteMajor' major.pk %}" class="button"><button>Delete</button></a>
+                        <a href="{% url 'MajorDetail' major.pk %}" class="button"><button>Players List</button></a>
+                    </li>
                 </div>
                 {% endfor %}
-            
+            </ul>
         </div>
         <div class="Main_Page">
-            <h1>Players</h1>
+            <h1>Squad Players</h1>
             <a href="{% url 'addSubject' %}" class="button"><button>+Add Players</button></a>
-            
+            <ol>
                 {% for subject in subjects %}
                 <div>
                     <br>
-                    
+                    <li>
                         
                         <span class="bold">Player Name: {{ subject.subject_name }}</span>
                         <br>
@@ -46,15 +46,16 @@
                         <br>
                         <span>Preffered Foot: {{subject.memo}}</span>
                         <br>
-                    <a href="{% url 'editSubject' subject.pk %}" class="button"><button>수정</button></a>
-                    <a href="{% url 'deleteSubject' subject.pk %}" class="button"><button>삭제</button></a>
+                    <a href="{% url 'editSubject' subject.pk %}" class="button"><button>Edit</button></a>
+                    <a href="{% url 'deleteSubject' subject.pk %}" class="button"><button>Delete</button></a>
                     </br>
-                    
+                    </li>
                 </div>
 
                 {% endfor %}
-            
+            </ol>
         </div>
-           
+        <div><img id="xhaka" src="https://i.pinimg.com/originals/36/28/67/36286709f9c3c3140b589480c9957c4d.jpg"></div>
+    </div>    
 </body>
 </html>
