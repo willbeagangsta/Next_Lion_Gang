@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'homereal.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="top_bar"><h2>Edit Information</h2></div>
+        <div class="Main_Page">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button>Edit</button>
+            </form>
+            <div><img id="xhaka"
+                    src="https://futaa.com/images/crops/800/2021072359673297.jpg">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

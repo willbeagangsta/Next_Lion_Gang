@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'homereal.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="top_bar">
+            <h1>Come On Ya Gunners</h1>
+        </div>
+        <div class="Main_Page">
+            <p>{{ comment }}</p>
+                </br>
+            <a href="{% url 'home' %}"><button>Back To Home</button></a>
+        </div>
+    </div>
+    <div><img id="xhaka" src="https://besthqwallpapers.com/Uploads/4-9-2021/177901/thumb2-aaron-ramsdale-4k-2021-english-footballers-arsenal-fc.jpg"></div>
+    </div>
+    
+</body>
+</html>
