@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>모든 전공</h1>
+    <a href="{% url 'addMajor' %}">전공 추가</a>
+    <div>
+        <ul>
+            {% for major in majors %}
+            <li>
+                {{ major.title }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <h1>모든 과목</h1>
+    <a href="{% url 'addSubject' %}">과목 추가</a>
+    <div>
+        <ol>
+            {% for subject in  subjects %}
+            <li>
+                {{ subject.name }}
+                {{ subject.major }}
+                {{ subject.professor }}
+                {{ subject.Memo }}
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+</body>
+</html>
