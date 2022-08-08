@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>15년차 구너의 아스날 일기장</h4>
+    <h1>Arsenal X Gang</h1>
+    <h4>Owner: 김하경</h4>
+
+    <div class="Box">
+        <div class="LineUp">
+            <h2>22-23 LineUp</h2>
+            <h3><a href="{% url 'addplayer' %}">선수 등록하기</a></h3>
+        </div>
+        <div class="LineUpBox">
+            <div id="PositionBox">
+                <span>GK</span>
+                <ul>
+                    {% for goalkeeper in goalkeepers %}
+                    <!-- <li></li>를 <a>태그로 감싸서 playerdetail로 넘어가게끔 함  -->
+                    <li> NO: {{ goalkeeper.backnumber }}/{{ goalkeeper.name }} </li>
+                    {% endfor %}
+                </ul>
+            </div>
+    
+            <div id="PositionBox">
+                <span>DF</span>
+                <ul>
+                    {% for defender in defenders %}
+                    <li> NO: {{ defender.backnumber }}/{{ defender.name }} </li>
+                    {% endfor %}
+                </ul>
+            </div>
+    
+            <div id="PositionBox">
+                <span>MF</span>
+                <ul>
+                    {% for midfielder in defenders %}
+                    <li> NO: {{ midfielder.backnumber }}/{{ midfielder.name }} </li>
+                    {% endfor %}
+                </ul>
+            </div>
+    
+            <div id="PositionBox">
+                <span>FW</span>
+                <ul>
+                    {% for forward in forwards %}
+                    <li> NO: {{ forward.backnumber }}/{{ forward.name }} </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

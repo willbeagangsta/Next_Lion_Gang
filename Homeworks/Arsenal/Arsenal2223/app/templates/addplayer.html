@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>선수 등록하기</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Player Name">
+        </div>
+        <div>
+            <label for="backnumber">Backnumber:</label>
+            <input type="number" name="backnumber" id="backnumber">
+        </div>
+        <div>
+            <label for="position">Position:</label>
+            <input type="text" name="position" id="position">
+        </div>
+        
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age">
+        </div>
+        <div>
+            <label for="nationality">Nationality:</label>
+            <input type="text" name="nationality" id="nationality">
+        </div>
+        <div>
+            <label for="foot">Preffered Foot:</label>
+            <input type="text" name="foot" id="foot">
+        </div>
+        <button type="submit">명단에 추가</button>
+    </form>
+</body>
+</html>
